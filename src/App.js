@@ -18,6 +18,13 @@ function App() {
         >
           Learn React
         </a>
+        <div>
+          <label class="label" for="name">
+            Enter name:
+          </label>
+          <input id="name"type="text"/>
+          <button style={{backgroundColor: "white", color:"white"}}>Submit</button>
+        </div>
       </header>
     </div>
   );
