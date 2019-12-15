@@ -1,27 +1,44 @@
-import React from 'react';
-import faker from 'faker';
+import React from "react";
+import CommentDetail from "./components/CommentDetail";
 // import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ApprovalCard from "./components/ApprovalCard";
 
 function App() {
   return (
     <div className="ui container comments">
-      <div className="comment">
-        <a href="/" className="avatar">
-          <img alt="avatar" src={faker.image.avatar()}/>
-        </a>
-        <div className="content">
-          <a href="/" className="comment">
-            Sam
-          </a>
-          <div className="metadata">
-            <span className="date">Today at 6:00 PM</span>
-          </div>
-          <div className="text">Nice blog post</div>
-        </div>
+      <div>
+        <ApprovalCard>
+          <CommentDetail
+            author="Sam"
+            time={new Date().toISOString()}
+            comment="Nice blog post"
+          />
+        </ApprovalCard>
+        <ApprovalCard>
+          <CommentDetail
+            author="Guru"
+            time={new Date().toString()}
+            comment="Nice blog post"
+          />
+        </ApprovalCard>
+        <ApprovalCard>
+          <CommentDetail
+            author="Alex"
+            time={new Date().toString()}
+            comment="Nice blog post"
+          />
+        </ApprovalCard>
+        <ApprovalCard>
+          <CommentDetail
+            author="Jane"
+            time={new Date().toString()}
+            comment="Nice blog post"
+          />
+        </ApprovalCard>
       </div>
     </div>
-  )
+  );
 }
 
 /* <div className="App">
